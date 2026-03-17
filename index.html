@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Fitness Planner • Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="home">
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html"><span class="brand-badge" aria-hidden="true"></span>AI Fitness</a>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="workouts.html">Workouts</a>
+          <a href="meals.html">Meals</a>
+          <a href="tracker.html">Tracker</a>
+          <a href="fitness_calc.html">Calculator</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>AI Fitness Planner, Tracker, Coach & Nutritionist</h1>
+        <p>
+          Fully local, multi-page web app: set your goals, generate 7-day workout + meal plans,
+          track progress, and calculate BMI/BMR/calorie needs — all offline in your browser.
+        </p>
+        <div id="statusPills" class="actions" aria-live="polite"></div>
+        <div class="actions">
+          <a class="btn primary" href="profile.html">Create / edit profile</a>
+          <a class="btn" href="workouts.html">View workout schedule</a>
+          <a class="btn" href="meals.html">View meal plan</a>
+        </div>
+      </section>
+
+      <section class="grid">
+        <div class="col-6">
+          <div id="homeCallout" class="notice good">
+            <strong>How to run</strong>
+            <div class="muted">
+              Open <strong>index.html</strong> in a browser (double-click). Use the navigation bar to switch pages.
+              Your data is stored in <strong>this browser only</strong> using localStorage.
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px;">
+            <h2>Next workout</h2>
+            <div id="nextWorkout" class="list"></div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="card">
+            <h2>Quick stats</h2>
+            <div id="homeKpi" class="kpi"></div>
+            <div class="divider"></div>
+            <div class="small">
+              This is a rule-based generator (predefined exercises + meals mapped to goals).
+              No APIs, no backend, no account required.
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px;">
+            <h2>What’s inside</h2>
+            <p>
+              - 7-day workouts tailored to goal + fitness level<br/>
+              - 7-day meals tailored to diet + calories/macros<br/>
+              - Progress tracking (workouts, weight, measurements)<br/>
+              - Adaptive highlighting for urgent/behind days<br/>
+              - Calculator: BMI, BMR, daily calorie needs
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">Offline-first • Runs locally • Built with HTML/CSS/JS</div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

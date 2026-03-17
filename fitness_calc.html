@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Fitness Planner • Fitness Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="calculator">
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html"><span class="brand-badge" aria-hidden="true"></span>AI Fitness</a>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="workouts.html">Workouts</a>
+          <a href="meals.html">Meals</a>
+          <a href="tracker.html">Tracker</a>
+          <a href="fitness_calc.html">Calculator</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Fitness calculator</h1>
+        <p>Calculates BMI, BMR, and daily calorie needs using your stored profile (and latest logged weight).</p>
+        <div id="statusPills" class="actions" aria-live="polite"></div>
+        <div id="calcNotice" class="notice" style="margin-top: 14px;">
+          <strong>Reminder</strong>
+          <div class="muted">Log your weight in the Tracker to keep calorie needs accurate.</div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 16px;">
+        <h2>Results</h2>
+        <div id="calcOut"></div>
+      </section>
+
+      <div class="footer">Calculator • BMI/BMR/TDEE • Offline estimates</div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
+

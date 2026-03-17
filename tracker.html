@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>AI Fitness Planner • Progress Tracker</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="tracker">
+    <header class="nav">
+      <div class="container">
+        <a class="brand" href="index.html"><span class="brand-badge" aria-hidden="true"></span>AI Fitness</a>
+        <nav class="navlinks" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="profile.html">Profile</a>
+          <a href="workouts.html">Workouts</a>
+          <a href="meals.html">Meals</a>
+          <a href="tracker.html">Tracker</a>
+          <a href="fitness_calc.html">Calculator</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Progress tracker</h1>
+        <p>Log completed workouts, weight, and measurements. The app adapts targets and highlights urgent days.</p>
+        <div id="statusPills" class="actions" aria-live="polite"></div>
+        <div id="trackerNotice" class="notice" style="margin-top:14px;">
+          <strong>Coach tip</strong>
+          <div class="muted">If you’re behind schedule, focus on the next workout — don’t try to “punish” yourself with marathon sessions.</div>
+        </div>
+      </section>
+
+      <div id="trackerStats" style="margin-top: 16px;"></div>
+
+      <section class="grid">
+        <div class="col-8">
+          <div class="card">
+            <h2>Workout completion</h2>
+            <div id="trackerWorkouts"></div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <h2>Weight trend</h2>
+            <canvas id="weightChart" width="420" height="180" style="width:100%;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,0.10);background:rgba(255,255,255,0.03);"></canvas>
+            <div class="divider"></div>
+            <form id="weightForm">
+              <div class="form-row">
+                <label>
+                  Date
+                  <input name="date" type="date" required />
+                </label>
+                <label>
+                  Weight (kg)
+                  <input name="weightKg" type="number" step="0.1" min="30" max="250" required />
+                </label>
+              </div>
+              <button class="btn primary" type="submit">Log weight</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" style="margin-top: 16px;">
+        <div class="col-12">
+          <div class="card">
+            <h2>Measurements</h2>
+            <div class="small">Optional. Log what matters to you (cm).</div>
+            <div class="divider"></div>
+            <form id="measForm">
+              <div class="form-row">
+                <label>
+                  Date
+                  <input name="date" type="date" required />
+                </label>
+                <label>
+                  Waist (cm)
+                  <input name="waistCm" type="number" step="0.1" />
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Hips (cm)
+                  <input name="hipsCm" type="number" step="0.1" />
+                </label>
+                <label>
+                  Chest (cm)
+                  <input name="chestCm" type="number" step="0.1" />
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Arms (cm)
+                  <input name="armsCm" type="number" step="0.1" />
+                </label>
+                <label>
+                  Thighs (cm)
+                  <input name="thighsCm" type="number" step="0.1" />
+                </label>
+              </div>
+              <button class="btn" type="submit">Log measurements</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">Tracker • Mark workouts • Log weight & measurements</div>
+    </main>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
